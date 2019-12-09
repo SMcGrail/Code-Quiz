@@ -1,0 +1,114 @@
+/*root will set the style for all HTML (sets the highest element in the DOM) */
+:root {
+    background-color: #ecf3ff;
+    font-size: 18px
+}
+
+*{ /*the askterisk in a universal selector, it will apply style to all elements on the page*/
+    box-sizing: border-box; /*box sizing includes the padding and border in the total width/height to the element*/
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /*dark grey is better than black becuase it reduces eye strain from the user, this is the same reason we chose the background color above instead of white*/
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #632a62;
+    text-align: center;
+}
+
+.container {
+    /*vw stands for view-width, vh is view height - resizes base on viewport size*/
+    width: 100vw;
+    height: 100vh;
+    display: flex; /*turns into flexbox*/
+    justify-content: center; /*allows to center horizontally and vertically*/
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto 0 auto; /*keeps everything center even if changing viewport*/
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-center {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+
+  .quiz-box {
+      /* background-color: gray; */
+      padding: 100px;
+      border: 1px solid #632a62;
+  }
+
+  /* BUTTONS */
+  /*applied to an anchor tag, but styling like a button*/
+  /* .btn {
+    font-size: 16px ;
+    padding: 15px 0;
+    width: 350px;
+    text-align: center;
+    border: .5px solid #632a62;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #333;
+    background-color: #ebd3ea;
+  } */
+/*   
+  .btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.5px 20px 0 #ebd3ea;
+    transform: translateY(-0.5px);
+    transition: transform 150ms;
+  }
+  
+  .btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  } */
+
+  .option-container {
+    border-radius: 25px;
+    display: flex;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid #2f404e40;
+    background-color: white;
+  }
+  
+  .option-container:hover {
+    cursor: pointer;
+    box-shadow: 0 1px 20px 0 #565c5f80;
+    transform: translateY(-1px);
+    transition: transform 150ms;
+  }
+  
+  .option-letter {
+    border-radius: 25px;
+    padding: 5px 15px;
+    background-image: -webkit-linear-gradient(#632a62, #7a7a7a);;
+    color: white;
+    
+  }
+  
+  .option-text {
+    border-radius: 25px;
+    padding: 10px;
+    width: 100%;
+  }
