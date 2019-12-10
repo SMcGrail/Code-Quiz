@@ -13,6 +13,17 @@
     color: #333; /*dark grey is better than black becuase it reduces eye strain from the user, this is the same reason we chose the background color above instead of white*/
 }
 
+body {
+    height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 0 0 0;
+    flex: 1 0 auto;
+}
+
+
 h1,
 h2,
 h3,
@@ -60,7 +71,7 @@ h1 {
 
   .quiz-box {
       /* background-color: gray; */
-      padding: 100px;
+      padding: 50px;
       border: 1px solid #632a62;
       background-color: #ffe6ea;
   }
@@ -145,3 +156,21 @@ h1 {
     margin: 5px;
     font-size: 30px;
   }
+
+  footer {
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    padding: 0 20px 20px 20px;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 25px;
+    background-color: #632a6200;
+    }
+
+.goHome {
+    color: #ebd3ea;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    text-align: center;
+} 
