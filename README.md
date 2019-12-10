@@ -1,7 +1,7 @@
 <h1>Code Quiz</h1>
 Interactive quiz app created using HTML, CSS, and JavaScript that will test your knowledge of basic coding.<br>
 
-<h2>In Progress</h2><br>
+<h2>NOTE: In Progress, some features may not be available at this time.</h2><br>
 
 Click start to beging the quiz and set the timer. A question will appear with a selection of four possible answers. If the correct option is selected the button will flash green and a new quiestion will populate. If the question is answered incorrectly the button will flash red and 15 seconds will be deducted from the timer.<br><br>
 The time left when all questions have been answered is your score!<br><br>
