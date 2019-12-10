@@ -47,6 +47,12 @@ h1 {
     justify-content: center;
     align-items: center;
   }
+
+  .grid-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
   
   .justify-center {
     justify-content: center;
@@ -56,7 +62,7 @@ h1 {
       /* background-color: gray; */
       padding: 100px;
       border: 1px solid #632a62;
-      background-color: #ecf3ff;
+      background-color: #ffe6ea;
   }
 
   /* BUTTONS */
@@ -94,7 +100,7 @@ h1 {
   
   .option-container:hover {
     cursor: pointer;
-    box-shadow: 0 1px 20px 0 #565c5f80;
+    box-shadow: 0 1px 20px 0 #493c4b80;
     transform: translateY(-1px);
     transition: transform 150ms;
   }
