@@ -13,9 +13,9 @@
     color: #333; /*dark grey is better than black becuase it reduces eye strain from the user, this is the same reason we chose the background color above instead of white*/
 }
 
-/* body {
+body {
     height: 20%;
-} */
+}
 
 .wrapper {
     width: 100%;
@@ -41,6 +41,7 @@ h1 {
 .container {
     /*vw stands for view-width, vh is view height - resizes base on viewport size*/
     width: 100vw;
+    height: 100vh;
     display: flex; /*turns into flexbox*/
     justify-content: center; /*allows to center horizontally and vertically*/
     /* align-items: center; */
