@@ -3,6 +3,12 @@ const question = document.getElementById("question");
 const options = Array.from(document.getElementsByClassName("option-text"));
 const scoreText = document.getElementById('score');
 
+const timeText = document.getElementById("finalCountdown");
+const mainEl = document.getElementById("main");
+
+let secondsLeft = 60;
+const scoreNerf = 15;
+
 let currentQuestion = {}; //{} this will be an object
 let acceptingAnswers = false; //to give a delay between selecting answers, when we are ready to acceot answers we can redefine this as true
 let score = 0; // score counter
@@ -74,7 +80,10 @@ startGame = () => {
     //creating a separate array so that I can remove questions as they are used so that the same question is not repeated multiple times in one instance of the quiz. 
     //console.log(availableQuestions); //so... that's the new array created using the spread operator. cool.
 
+    setTime(); //call function that starts timer
     getNewQuestion();
+    
+
 };
 
 //function to get a new question... obviously.
@@ -123,10 +132,15 @@ options.forEach(option => {
         const selectedOption = e.target;
         const selectedAnswer = selectedOption.dataset["number"];
 
-        let classCorrect = 'incorrect'; // set the default value to incorrect
-        if (selectedAnswer == currentQuestion.answer) {
-            classCorrect = 'correct'; // if the selectedAnswer is equal to the currentQuestion.answer then the 'correct' class is applied
+        let classCorrect = 'correct'; // set the default value to incorrect
+        if (selectedAnswer != currentQuestion.answer) {
+            classCorrect = 'incorrect'; // if the selectedAnswer is equal to the currentQuestion.answer then the 'correct' class is applied
+            
         };
+
+        // if (classCorrect = 'incorrect') {
+        //     timerInterval = secondsLeft -= scoreNerf;
+        // }
 
         //the selectedoption is the text that is selected, the pareentElement would be the container box that is selected. 
         //classList.add is adding the classCorrect class to the container element, this will set the class to apply to correct or incorrect
@@ -141,6 +155,22 @@ options.forEach(option => {
     });
 
 });
+
+setTime = () => {
+    const timerInterval = setInterval(function() {
+      secondsLeft--;
+      timeText.innerText = secondsLeft;
+  
+      if(secondsLeft === 0 || availableQuestions.length === 0) {
+        clearInterval(timerInterval);
+        return window.location.assign("end.html");
+      }
+  
+    }, 1000);
+  };
+console.log(secondsLeft);
+
+
 
 //call function to start quiz.
 startGame();
