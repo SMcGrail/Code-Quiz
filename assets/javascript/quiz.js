@@ -1,6 +1,7 @@
 //defining variables like a boss
 const question = document.getElementById("question");
 const options = Array.from(document.getElementsByClassName("option-text"));
+const scoreText = document.getElementById('score');
 
 let currentQuestion = {}; //{} this will be an object
 let acceptingAnswers = false; //to give a delay between selecting answers, when we are ready to acceot answers we can redefine this as true
@@ -81,7 +82,7 @@ getNewQuestion = () => {
     //if statement that stops the quiz if all of the questions have been answered.
     if (availableQuestions.length === 0) {
         //if above conditions are met, user is taken to the end page.
-        return window.location.assign("/end.html");
+        return window.location.assign("end.html");
     }
     //randomize a question from the array. availableQuestions.length will run through all questions in array
     const questionList = Math.floor(Math.random() * availableQuestions.length);
