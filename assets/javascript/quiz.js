@@ -4,7 +4,6 @@ const options = Array.from(document.getElementsByClassName("option-text"));
 const scoreText = document.getElementById('score');
 
 const timeText = document.getElementById("finalCountdown");
-const mainEl = document.getElementById("main");
 
 let secondsLeft = 60;
 const scoreNerf = 15;
@@ -82,7 +81,7 @@ startGame = () => {
 
     setTime(); //call function that starts timer
     getNewQuestion();
-    
+
 
 };
 
@@ -135,39 +134,33 @@ options.forEach(option => {
         let classCorrect = 'correct'; // set the default value to incorrect
         if (selectedAnswer != currentQuestion.answer) {
             classCorrect = 'incorrect'; // if the selectedAnswer is equal to the currentQuestion.answer then the 'correct' class is applied
-            
         };
-
-        // if (classCorrect = 'incorrect') {
-        //     timerInterval = secondsLeft -= scoreNerf;
-        // }
 
         //the selectedoption is the text that is selected, the pareentElement would be the container box that is selected. 
         //classList.add is adding the classCorrect class to the container element, this will set the class to apply to correct or incorrect
         selectedOption.parentElement.classList.add(classCorrect);
         console.log(classCorrect);
 
-        setTimeout( () => { //setTimeout is built into Javascript. I am using it here to create a delay between questions so that a color can be applied signifying correct ot incorrect
+        setTimeout(() => { //setTimeout is built into Javascript. I am using it here to create a delay between questions so that a color can be applied signifying correct ot incorrect
             selectedOption.parentElement.classList.remove(classCorrect);//this is the removal of the class from the container element.
             getNewQuestion();
-            }, 150); //200 is the parameter of how long the setTimeout delay is (1000 = 1 second)
+        }, 150); //200 is the parameter of how long the setTimeout delay is (1000 = 1 second)
         //I set the timer to 150 so that the delay is quick due to the timer.
     });
 
 });
 
 setTime = () => {
-    const timerInterval = setInterval(function() {
-      secondsLeft--;
-      timeText.innerText = secondsLeft;
-  
-      if(secondsLeft === 0 || availableQuestions.length === 0) {
-        clearInterval(timerInterval);
-        return window.location.assign("end.html");
-      }
-  
+    const timerInterval = setInterval(function () {
+        secondsLeft--;
+        timeText.innerText = secondsLeft;
+
+        if (secondsLeft === 0 || availableQuestions.length === 0) {
+            clearInterval(timerInterval);
+            return window.location.assign("end.html");
+        }
     }, 1000);
-  };
+};
 console.log(secondsLeft);
 
 
