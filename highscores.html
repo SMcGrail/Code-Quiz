@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#632a62">
     <title>Code Quiz</title>
+    <link rel="stylesheet" href="assets/css/highscores.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
 </head>
@@ -14,21 +15,23 @@
 <body>
     <div class="wrapper">
         <div class="container">
-            <div id="quiz" class="flex-container flex-column">
+            <div id="highscores" class="flex-container flex-column">
                 <h1>Code Quiz</h1>
-                <div id="show-score">
+                
                     <p class="highscore-text">
-                        High Scores:
+                        Top 10 High Scores:</p>
+                    <hr noshade>
+                    <ul id="bragList"></ul>
+                    <hr noshade>
+                    <a class="goHome" href="index.html">Home</a>
 
-                    </p>
-                </div>
-                <a class="goHome" href="index.html">Home</a>
             </div>
-  
+          
         </div>
     </div>
+
     <footer>
-    
+
     </footer>
 
     <script src="assets/javascript/highscores.js"></script>

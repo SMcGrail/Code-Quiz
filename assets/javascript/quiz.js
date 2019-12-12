@@ -39,20 +39,36 @@ let questions = [
         "answer": 4
     },
     {
-        "question": "Question 4 - the answer is 4",
-        "option1": "answer 1",
-        "option2": "answer 2",
-        "option3": "answer 3",
-        "option4": "answer 4",
-        "answer": 4
+        "question": "How do you make text bold in CSS?",
+        "option1": "font-size:",
+        "option2": "font-weight:",
+        "option3": "text-size:",
+        "option4": "text-bold:",
+        "answer": 2
     },
     {
-        "question": "Question 5 - the answer is 2",
-        "option1": "answer 1",
-        "option2": "answer 2",
-        "option3": "answer 3",
-        "option4": "answer 4",
+        "question": "What is <hr> in HTML?",
+        "option1": "Human Resources",
+        "option2": "Horizontal Rule",
+        "option3": "Harry Potter",
+        "option4": "Hang Right",
         "answer": 2
+    },
+    {
+        "question": "How do you write 'equals' in JavaScript?",
+        "option1": "===",
+        "option2": "=",
+        "option3": "equals",
+        "option4": "<=>",
+        "answer": 1
+    },
+    {
+        "question": "What is the answer to everything?",
+        "option1": "The limit does not exist",
+        "option2": "Life",
+        "option3": "42",
+        "option4": "Mountain Dew and Doritos",
+        "answer": 3
     }
 ];
 

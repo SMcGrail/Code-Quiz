@@ -1,0 +1,25 @@
+#bragList {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2px;
+}
+
+.highscoresListItem {
+    font-size: 25px;
+    margin-bottom: 5px;
+
+}
+
+.highscoresListItem:hover {
+    transform: scale(1.025);
+}
+
+.highscore-text {
+    font-size: 30px;
+    margin-bottom: 2px;
+}
+
+hr {
+    border-color: #632a62;
+    margin-bottom: 10px;
+}

@@ -211,6 +211,7 @@ form {
 }
 
 input {
+  border-radius: 25px;
   margin-bottom: 10px 0 5px 0;
   width: 350px;
   padding: 15px;
@@ -221,8 +222,15 @@ input {
 
 #saveScoreBtn {
   margin-bottom: 50px;
+  padding: 2px;
+  width: 350px;
+  height: 30px;
+  background-color: #632a62;
+  color: #f8dbe0;
 }
 
 input::placeholder {
-  color: #aaa;
+  color: #b48bbd;
+  text-align: center;
 }
+
