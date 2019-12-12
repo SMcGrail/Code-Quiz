@@ -1,16 +1,16 @@
 const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("saveScoreBtn");
 const finalScore = document.getElementById("finalScore");
-const mostRecentScore = localStorage.getItem('mostRecentScore');
+const yourScore = localStorage.getItem('yourScore');
 
 //NOTE: Things stored in local storage are stored as a string
 //create an array of high scores
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 console.log(highScores);
 
-finalScore.innerText = mostRecentScore; //pulls the final time from the quiz page and displays here.
+finalScore.innerText = yourScore; //pulls the final time from the quiz page and displays here.
 
-//function to enable button once username field has input
+//function to enable button once username field has input, the button is marked as disabled by default through HTML
 username.addEventListener("keyup", () => {
     saveScoreBtn.disabled = !username.value;
 });
@@ -21,7 +21,7 @@ saveHighscore = e => {
 
     //This will save the username and scores to an object
     const score = {
-        score: mostRecentScore,
+        score: yourScore,
         name: username.value
     };
 
@@ -39,5 +39,9 @@ saveHighscore = e => {
     window.location.assign("highscores.html");
     console.log(highScores);
 };
+
+
+
+
 
 

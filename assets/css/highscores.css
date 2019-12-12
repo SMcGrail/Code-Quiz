@@ -23,3 +23,12 @@ hr {
     border-color: #632a62;
     margin-bottom: 10px;
 }
+
+#clearBtn {
+    background-color: #632a62;
+    color: #ebd3ea;
+    font-size: 20px;
+    width: 350px;
+    height: 30px;
+    padding: 0 35px;
+}

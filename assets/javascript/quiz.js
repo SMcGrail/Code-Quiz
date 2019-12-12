@@ -159,11 +159,11 @@ setTime = () => {
         secondsLeft--;
         timeText.innerText = secondsLeft;
 
-        if (secondsLeft == 0 || availableQuestions.length === "") {
+        if (secondsLeft === 0 || availableQuestions.length === "") {
             clearInterval(timerInterval);
             return window.location.assign("end.html");   
      }
-     localStorage.setItem("mostRecentScore", secondsLeft); // this will hold the fnal time in localStorage so that it can be displayed on the end page.
+     localStorage.setItem("yourScore", secondsLeft); // this will hold the fnal time in localStorage so that it can be displayed on the end page.
     }, 1000);
     };
 

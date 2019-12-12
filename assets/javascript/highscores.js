@@ -1,4 +1,5 @@
 const bragList = document.getElementById('bragList');
+const clearBtn = document.getElementById('clearBtn');
 const highScores = JSON.parse(localStorage.getItem("highScores")) || []; // getting our strings from the array, or blan array in case there is nothing there.
 
 
@@ -9,3 +10,10 @@ bragList.innerHTML = highScores
 })
 //this returns a string of <li>'s with the object values score and name.
 .join("");// join add the strings together (joins the <li>'s together)
+
+
+clear = e => {
+    e.localStorage.clear(highScores);
+ 
+};
+
