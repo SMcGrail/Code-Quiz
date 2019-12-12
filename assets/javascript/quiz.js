@@ -130,9 +130,9 @@ options.forEach(option => {
         const selectedOption = e.target;
         const selectedAnswer = selectedOption.dataset["number"];
 
-        let classCorrect = 'correct'; // set the default value to incorrect
+        let classCorrect = 'correct'; // set the default value to correct
         if (selectedAnswer != currentQuestion.answer) {
-            classCorrect = 'incorrect'; // if the selectedAnswer is equal to the currentQuestion.answer then the 'correct' class is applied
+            classCorrect = 'incorrect'; // if the selectedAnswer is NOT equal to the currentQuestion.answer then the 'incorrect' class is applied
         };
 
         //the selectedoption is the text that is selected, the pareentElement would be the container box that is selected. 
