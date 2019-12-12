@@ -143,14 +143,16 @@ setTime = () => {
         secondsLeft--;
         timeText.innerText = secondsLeft;
 
-        if (secondsLeft === 0 || availableQuestions.length === 0) {
+        if (secondsLeft === 0 || availableQuestions.length === "") {
             clearInterval(timerInterval);
-            return window.location.pathname("end.html");
-            
-            
-        }
+            return window.location.pathname("end.html");   
+     }
+     localStorage.setItem("mostRecentScore", secondsLeft); // this will hold the fnal time in localStorage so that it can be displayed on the end page.
     }, 1000);
-};
+    };
+
+   
+
 
 
 
