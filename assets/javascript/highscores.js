@@ -11,9 +11,11 @@ bragList.innerHTML = highScores
 //this returns a string of <li>'s with the object values score and name.
 .join("");// join add the strings together (joins the <li>'s together)
 
-
-clear = e => {
-    e.localStorage.clear(highScores);
- 
+//function to clear the localStorage and remove the ul (bragList)
+const clearScore = () => {
+    localStorage.clear()
+    while (bragList.firstChild) {
+    bragList.removeChild(bragList.firstChild)
+    }
 };
 
