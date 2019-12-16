@@ -86,11 +86,11 @@ startGame = () => {
 
 //function to get a new question... obviously.
 getNewQuestion = () => {
-    //if statement that stops the quiz if all of the questions have been answered.
     if (availableQuestions.length === 0) {
         //if above conditions are met, user is taken to the end page.
         return window.location.assign("end.html");
-    }
+    };
+
     //randomize a question from the array. availableQuestions.length will run through all questions in array
     const questionList = Math.floor(Math.random() * availableQuestions.length);
     //questionList is a list of the current available questions, this will not include questions already used. 
@@ -158,21 +158,17 @@ setTime = () => {
     const timerInterval = setInterval(function () {
         secondsLeft--;
         timeText.innerText = secondsLeft;
-
-        if (secondsLeft === 0 || availableQuestions.length === "") {
+        console.log(secondsLeft)
+        if (secondsLeft <= 0 || availableQuestions.length === 0) {
             clearInterval(timerInterval);
+            localStorage.setItem("yourScore", (secondsLeft > 0 ? secondsLeft : 0));
             return window.location.assign("end.html");   
      }
-     localStorage.setItem("yourScore", secondsLeft); // this will hold the fnal time in localStorage so that it can be displayed on the end page.
+      // this will hold the final time in localStorage so that it can be displayed on the end page.
     }, 1000);
-    };
+
+};
 
    
-
-
-
-
-
-
 //call function to start quiz.
 startGame();
